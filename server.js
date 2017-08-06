@@ -7,7 +7,23 @@ app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  
+});app.get('/ARTICLE-ONE',function (req,res){
+    res.send('ARTCILE-ONE is requested and will be served');
+    
 });
+
+app.get('/ARTICLE-TWO',function (req,res){
+    res.send('ARTCILE-TWO is requested and will be served');
+    
+});
+
+app.get('/ARTICLE-THREE',function (req,res){
+    res.send('ARTCILE-THREE is requested and will be served');
+    
+});
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
